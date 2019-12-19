@@ -1,0 +1,16 @@
+{
+  "challenge-block": {
+    "component": "BlockChallenge",
+    "allowed": ["challenge-content", "challenge-fallback"]
+  },
+  "challenge-content": {
+    "component": "BlockContent",
+    "composition": "children",
+    "allowed": "*"
+  },
+  "challenge-fallback": {
+    "component": "BlockContent",
+    "composition": "children",
+    "allowed": "*"
+  }
+}
