@@ -51,7 +51,7 @@ Example:
 + }
 ```
 
-This component will check if the user is logged. If the user is logged in, he will see the `Content`, otherwise he will see the `Fallback`.
+This component will check if the user is logged. If the user is logged in, he will see the `challenge-content`, otherwise he will see the `challenge-fallback`.
 
 ### Styles API
 
@@ -77,7 +77,7 @@ To use this CSS API, you must add the `styles` builder and create an app styling
 
 #### CSS namespaces
 
-Below, we describe the namespaces that are defined in the `Carousel`.
+Below, we describe the namespaces that are defined in the `BlockChallenge`.
 
 | Class name               | Description                                                                    | Component Source                                                                             |
 | ------------------------ | ------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------- |
