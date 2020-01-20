@@ -1,15 +1,13 @@
 import React from 'react'
-import { useSessionAuthorization } from './hooks/useSessionAuthorization'
-import { useProfileAllowed } from './hooks/useProfileAllowed'
+import getProfile from './graphql/getProfile.graphql'
 import { ExtensionPoint } from 'vtex.render-runtime'
+import { useQuery } from 'react-apollo'
+import { isNil, path } from 'ramda'
 
 const BlockChallenge = () => {
-  const isAuthorized = useSessionAuthorization()
-  const profileAllowed = useProfileAllowed(!isAuthorized)
+  const { data: profileData, error, loading } = useQuery(getProfile)
 
-  const isAuthenticated = isAuthorized === false ? false : profileAllowed
-
-  if (isAuthenticated === null || isAuthenticated === false) {
+  if (loading || error || isNil(path(['profile'], profileData))) {
     return <ExtensionPoint id="challenge-fallback" />
   }
   return <ExtensionPoint id="challenge-content" />
