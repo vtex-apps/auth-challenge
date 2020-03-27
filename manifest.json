@@ -1,8 +1,8 @@
 {
   "vendor": "vtex",
-  "name": "challenge-block",
+  "name": "auth-challenge",
   "version": "0.0.0",
-  "title": "VTEX Block Challenge",
+  "title": "Challenge block for Store Framework",
   "description": "",
   "builders": {
     "react": "3.x",

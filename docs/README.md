@@ -1,6 +1,6 @@
-# Challenge Block
+# Auth Challenge
 
-> Challenge that checks if a user is logged in to view the content
+> Challenge for Store Framework that checks if a user is logged in to view the content
 
 ## Usage
 
@@ -11,7 +11,7 @@ Add this app to your theme dependencies:
 // ...
   "dependencies": {
     // ...
-    "vtex.challenge-block": "0.x"
+    "vtex.auth-challenge": "0.x"
   }
 ```
 
@@ -67,7 +67,7 @@ To use this CSS API, you must add the `styles` builder and create an app styling
   }
 ```
 
-2. Create a file called `vtex.challenge-block.css` inside the `styles/css` folder. Add your custom styles:
+2. Create a file called `vtex.auth-challenge.css` inside the `styles/css` folder. Add your custom styles:
 
 ```css
 .challengeContentWrapper {
