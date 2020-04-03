@@ -11,7 +11,7 @@ Add this app to your theme dependencies:
 // ...
   "dependencies": {
     // ...
-    "vtex.auth-challenge": "0.x"
+    "vtex.auth-challenge": "1.x"
   }
 ```
 
