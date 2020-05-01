@@ -5,7 +5,7 @@ import { useQuery } from 'react-apollo'
 import { isNil, path } from 'ramda'
 
 const BlockChallenge = () => {
-  const { data: profileData, error, loading } = useQuery(getProfile)
+  const { data: profileData, error, loading } = useQuery(getProfile, { ssr: false })
 
   if (loading || error || isNil(path(['profile'], profileData))) {
     return <ExtensionPoint id="challenge-fallback" />
