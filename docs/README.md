@@ -8,7 +8,9 @@
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <!-- DOCS-IGNORE:end -->
 
-The Auth Challenge app is an essential B2B feature responsible for checking if an user is logged in or not. It helps define which components should be displayed for authenticated and anonymous users.
+The Auth Challenge app is an essential B2B feature responsible for checking iif a user is allowed to access the store's content. It helps define which components should be displayed for users that are allowed and users that are not.
+
+:information_source: This check is made according to the Condition Rule specified in the Trade Policy configuration, one of the steps needed to [**configure a B2B environment in VTEX IO**](https://vtex.io/docs/recipes/store/configuring-a-b2b-environment).
 
 ![aut-challenge](https://user-images.githubusercontent.com/52087100/85445025-50cc9600-b569-11ea-9db9-1a25f93b8109.png)
 *In the example above, the `Become a parter` link in the Header is only displayed for anonymous users. Once the user is authenticated (second image), he become able to see the `Quick Order` and the `Order quote` links.*
@@ -83,7 +85,7 @@ Now, you are able to use all blocks exported by the `auth-challenge` app. Check 
 + }
 ```
 
-According to the example above, logged-in users will see the component rendered by the `product-description` block. Anonymous users, in turn, will see a Rich Text component  (`challenge-fallback`'s child block).
+According to the example above, users that have the attached trade policy will see the component rendered by the `product-description` block. Others, in turn, will see a Rich Text component  (`challenge-fallback`'s child block).
 
 ## Customization
 

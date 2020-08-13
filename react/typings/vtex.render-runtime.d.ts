@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-types */
 /* Typings for `render-runtime` */
 declare module 'vtex.render-runtime' {
   import { Component, ComponentType, ReactElement, ReactType } from 'react'
@@ -51,8 +52,12 @@ declare module 'vtex.render-runtime' {
   interface Session {
     id: string
     namespaces: {
+      store: {
+        channel: string
+      }
       profile: {
         isAuthenticated: KeyValue
+        email: string
       }
     }
   }
@@ -74,4 +79,6 @@ declare module 'vtex.render-runtime' {
   export interface SessionPromise {
     response: Session | SessionUnauthorized | SessionForbidden
   }
+
+  export type SessionResponse = Session | SessionUnauthorized | SessionForbidden
 }
