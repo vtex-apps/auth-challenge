@@ -1,7 +1,7 @@
 {
   "vendor": "vtex",
   "name": "auth-challenge",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "title": "Challenge block for Store Framework",
   "description": "",
   "builders": {
