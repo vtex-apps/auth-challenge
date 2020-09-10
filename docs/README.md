@@ -8,7 +8,13 @@
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <!-- DOCS-IGNORE:end -->
 
-The Auth Challenge app is an essential B2B feature responsible for checking iif a user is allowed to access the store's content. It helps define which components should be displayed for users that are allowed and users that are not.
+The Auth Challenge app is an essential B2B feature responsible for checking if a user is allowed to access the store's content. It helps define which components should be displayed for users that are allowed and users that are not.
+
+## Example Use Case
+
+Add a condition to a TP that applies to your user. As an anonymous user, you should not see the real content. When you log in, and if and only if the condition you added above matches your profile, you should see the real content.
+
+Now remove the condition from the TP that applies to your user. Now as an anonymous user, you should not see the real content. When you login, you should see the real content.
 
 :information_source: This check is made according to the Condition Rule specified in the Trade Policy configuration, one of the steps needed to [**configure a B2B environment in VTEX IO**](https://vtex.io/docs/recipes/store/configuring-a-b2b-environment).
 

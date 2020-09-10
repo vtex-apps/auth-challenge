@@ -29,7 +29,7 @@ const isProfileAllowed = (sessionResponse: SessionResponse | undefined) => {
 
   const isLoggedIn = (sessionResponse as Session).namespaces?.profile?.email
 
-  if (hasAccessToTradePolicy) {
+  if (isLoggedIn && hasAccessToTradePolicy) {
     return 'authorized'
   }
 
