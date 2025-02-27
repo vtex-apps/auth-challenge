@@ -5,6 +5,7 @@ metadata:
   annotations:
     github.com/project-slug: vtex-apps/auth-challenge
     backstage.io/techdocs-ref: dir:./
+    vtex.com/application-id: 28LWIOKS
 spec:
   system: b2b-suite
   type: frontend-ui
